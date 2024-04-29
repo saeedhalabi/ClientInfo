@@ -1,0 +1,10 @@
+#image-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+}
+#file {
+  margin: 20px 0 0 66px;
+  cursor: pointer;
+}
