@@ -33,11 +33,11 @@ $(document).ready(function () {
       isValid = false;
     }
 
-    // Other input validations go here
-
-    // If form is valid, submit it
-    if (isValid) {
-      // Your form submission logic here
+    // Country validation
+    let country = $("#countrySelect").val();
+    if (country === "Select your country") {
+      displayError($("#countryError"), "Please select a country.");
+      isValid = false;
     }
   });
 

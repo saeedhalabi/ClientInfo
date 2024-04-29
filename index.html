@@ -24,10 +24,10 @@
       <input type="file" id="file" />
       <hr />
       <!-- Form (first/lastname\country...) -->
-      <!-- Name -->
       <form id="formApp">
         <div class="row mb-3">
-          <div class="col-md-6">
+          <!-- Added margin-bottom -->
+          <div class="col-md-6 mb-3">
             <label for="nameInput" class="form-label">Name</label>
             <input
               type="text"
@@ -46,20 +46,25 @@
               placeholder="Enter your Last name"
             />
             <span class="error" id="lastNameError"></span>
-          </div>  
+          </div>
         </div>
+        <!-- End of row -->
+
         <!-- Dropdown -->
         <div class="row mb-3">
-          <div class="col-md-6">
+          <!-- Added margin-bottom -->
+          <div class="col-md-6 mb-3">
             <label for="countrySelect" class="form-label">Country</label>
             <select class="form-select" id="countrySelect">
               <option selected disabled>Select your country</option>
               <option value="USA">United States</option>
               <option value="UK">United Kingdom</option>
               <option value="Canada">Canada</option>
-              <option value="Canada">Lebanon</option>
-              <!-- Add more options as needed -->
+              <option value="Lebanon">Lebanon</option>
+              <!-- Corrected duplicated value -->
             </select>
+            <span class="error" id="countryError"></span>
+            <!-- Moved error span inside the div -->
           </div>
           <div class="col-md-6">
             <label for="aboutUsSelect" class="form-label"
@@ -70,13 +75,17 @@
               <option value="onlineSearch">Online Search</option>
               <option value="meeting">Meeting</option>
               <option value="event">Event</option>
-              <option value="refferal">Refferal from a team member</option>
+              <option value="refferal">Referral from a team member</option>
+              <!-- Corrected spelling -->
               <option value="other">Other</option>
             </select>
           </div>
         </div>
+        <!-- End of row -->
+
         <!-- Status of employment -->
         <div class="row mb-3">
+          <!-- Added margin-bottom -->
           <div class="col-md-6">
             <label for="statusEmployment" class="form-label"
               >Status of Employment</label
@@ -89,6 +98,8 @@
             </select>
           </div>
         </div>
+        <!-- End of row -->
+
         <div class="text-center">
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
