@@ -22,37 +22,59 @@
         id="image-circle"
       ></div>
       <input type="file" id="file" />
+      <hr />
       <!-- Form (first/lastname\country...) -->
+      <!-- Name -->
       <form>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
+          <label for="nameInput" class="form-label">Name</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+            id="nameInput"
+            placeholder="Enter your name"
           />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
         </div>
+        <!-- Last Name -->
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <label for="lastNameInput" class="form-label">Last Name</label>
           <input
-            type="password"
+            type="text"
             class="form-control"
-            id="exampleInputPassword1"
+            id="lastNameInput"
+            placeholder="Enter your Last name"
           />
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
+        <!-- Dropdown -->
+        <div class="mb-3">
+          <label for="countrySelect" class="form-label">Country</label>
+          <select class="form-select" id="countrySelect">
+            <option selected disabled>Select your country</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Canada">Lebanon</option>
+
+            <!-- Add more options as needed -->
+          </select>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- Hear about us? -->
+        <div class="mb-3">
+          <label for="aboutUsSelect" class="form-label"
+            >How did you hear about us?</label
+          >
+          <select class="form-select" id="aboutUsSelect">
+            <option selected disabled>Select one of the options</option>
+            <option value="onlineSearch">Online Search</option>
+            <option value="meeting">Meeting</option>
+            <option value="event">Event</option>
+            <option value="refferal">Refferal from a team member</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnSubmit">
+          Submit
+        </button>
       </form>
     </div>
   </body>
