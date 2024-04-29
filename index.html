@@ -25,7 +25,7 @@
       <hr />
       <!-- Form (first/lastname\country...) -->
       <!-- Name -->
-      <form>
+      <form id="formApp">
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="nameInput" class="form-label">Name</label>
@@ -35,6 +35,7 @@
               id="nameInput"
               placeholder="Enter your name"
             />
+            <span class="error" id="nameError"></span>
           </div>
           <div class="col-md-6">
             <label for="lastNameInput" class="form-label">Last Name</label>
@@ -44,7 +45,8 @@
               id="lastNameInput"
               placeholder="Enter your Last name"
             />
-          </div>
+            <span class="error" id="lastNameError"></span>
+          </div>  
         </div>
         <!-- Dropdown -->
         <div class="row mb-3">
