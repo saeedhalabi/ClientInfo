@@ -12,3 +12,6 @@
   transform: translateX(-10px);
   width: 220px;
 }
+#dobError {
+  margin-left: 10px;
+}

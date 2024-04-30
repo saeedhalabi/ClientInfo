@@ -69,12 +69,25 @@ $(document).ready(function () {
     if (dobValidation === "") {
       displayError($("#dobError"), "Please enter your date of birth.");
       isValid = false;
-    }
+    } else {
+      // Calculate the date 18 years ago from today
+      let eighteenYearsAgo = new Date();
+      eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
 
-    // if all items are valid, proceed with validation
-    if (isValid) {
-      // Clear any previous error messages
-      $(".error").text("");
+      // Convert the input date to a Date object
+      let selectedDate = new Date(dobValidation);
+
+      // Compare the selected date with 18 years ago
+      if (selectedDate > eighteenYearsAgo) {
+        displayError($("#dobError"), "Cannot be under 18.");
+        isValid = false;
+      }
+
+      // if all items are valid, proceed with validation
+      if (isValid) {
+        // Clear any previous error messages
+        $(".error").text("");
+      }
     }
   });
 
