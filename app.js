@@ -39,6 +39,23 @@ $(document).ready(function () {
       displayError($("#countryError"), "Please select a country.");
       isValid = false;
     }
+
+    // about validation
+    let aboutUsValidation = $("#aboutSelect").val();
+    if (aboutUsValidation === "Select one of the options") {
+      displayError($("#aboutError"), "Please select one of the options above.");
+      isValid = false;
+    }
+
+    // employment valaidation
+    let employmentValidation = $("#statusEmployment").val();
+    if (employmentValidation === "Select your status of work") {
+      displayError(
+        $("#employmentError"),
+        "Please select your status of employment."
+      );
+      isValid = false;
+    }
   });
 
   // Function to display error message

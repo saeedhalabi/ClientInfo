@@ -55,8 +55,10 @@
           <!-- Added margin-bottom -->
           <div class="col-md-6 mb-3">
             <label for="countrySelect" class="form-label">Country</label>
-            <select class="form-select" id="countrySelect">
-              <option selected disabled>Select your country</option>
+            <select class="form-select">
+              <option selected disabled id="countrySelect">
+                Select your country
+              </option>
               <option value="USA">United States</option>
               <option value="UK">United Kingdom</option>
               <option value="Canada">Canada</option>
@@ -67,18 +69,20 @@
             <!-- Moved error span inside the div -->
           </div>
           <div class="col-md-6">
-            <label for="aboutUsSelect" class="form-label"
+            <label for="aboutSelect" class="form-label"
               >How did you hear about us?</label
             >
-            <select class="form-select" id="aboutUsSelect">
-              <option selected disabled>Select one of the options</option>
+            <select class="form-select">
+              <option selected disabled id="aboutSelect">
+                Select one of the options
+              </option>
               <option value="onlineSearch">Online Search</option>
               <option value="meeting">Meeting</option>
               <option value="event">Event</option>
-              <option value="refferal">Referral from a team member</option>
-              <!-- Corrected spelling -->
+              <option value="referral">Referral from a team member</option>
               <option value="other">Other</option>
             </select>
+            <span class="error" id="aboutError"></span>
           </div>
         </div>
         <!-- End of row -->
@@ -90,12 +94,15 @@
             <label for="statusEmployment" class="form-label"
               >Status of Employment</label
             >
-            <select class="form-select" id="statusEmployment">
-              <option selected disabled>Select your status of work</option>
+            <select class="form-select">
+              <option selected disabled id="statusEmployment">
+                Select your status of work
+              </option>
               <option value="employed">Employed</option>
               <option value="unemployed">Unemployed</option>
               <option value="retired">Retired</option>
             </select>
+            <span class="error" id="employmentError"></span>
           </div>
         </div>
         <!-- End of row -->
