@@ -15,3 +15,10 @@
 #dobError {
   margin-left: 10px;
 }
+#onlineSearchOptions {
+  position: relative;
+  left: 50%;
+}
+.form-label {
+  margin-left: 10px;
+}

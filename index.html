@@ -80,7 +80,66 @@
             </select>
             <span class="error" id="aboutError"></span>
           </div>
+          <!-- Radio Buttons for online search when clicked -->
+          <div id="onlineSearchOptions" style="display: none">
+            <label class="form-label">Select one:</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="onlineSearchOption"
+                id="instagramRadio"
+                value="instagram"
+              />
+              <label class="form-check-label" for="instagramRadio">
+                Instagram
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="onlineSearchOption"
+                id="linkedinRadio"
+                value="linkedin"
+              />
+              <label class="form-check-label" for="linkedinRadio">
+                LinkedIn
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="onlineSearchOption"
+                id="facebookRadio"
+                value="facebook"
+              />
+              <label class="form-check-label" for="facebookRadio">
+                Facebook
+              </label>
+            </div>
+          </div>
         </div>
+        <!-- Refferal from a team member name -->
+        <div
+          class="col-md-6 mb-3"
+          style="display: none"
+          id="referralFromTeamMember"
+        >
+          <label for="referralTeamMember" class="form-label"
+            >Enter team member name (e.g. John Doe)</label
+          >
+          <input type="text" class="form-control" id="referralTeamMember" />
+          <span class="error" id="refferalMemberError"></span>
+        </div>
+        <!-- Other (Enter details) -->
+        <div class="col-md-6 mb-3" style="display: none" id="otherDetails">
+          <label for="otherDetails" class="form-label">Details</label>
+          <textarea class="form-control" id="otherDetails" rows="3"></textarea>
+          <span class="error" id="detailsError"></span>
+        </div>
+
         <!-- End of row -->
 
         <!-- Status of employment -->
@@ -113,7 +172,7 @@
         <!-- End of row -->
 
         <div class="text-center">
-          <button type="submit" class="btn btn-primary mt-5">Submit</button>
+          <button type="submit" class="btn btn-primary mt-2">Submit</button>
         </div>
       </form>
     </div>

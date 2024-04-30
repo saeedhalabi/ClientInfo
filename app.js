@@ -8,6 +8,34 @@ $(document).ready(function () {
     }
   });
 
+  // Handle aboutSelect change event
+  $("#aboutSelect").change(function () {
+    let selectedOption = $(this).val(); // Get the value of the selected option
+    if (selectedOption === "onlineSearch") {
+      // If selected option is "Online Search", show online search options and hide referral input
+      $("#onlineSearchOptions").show();
+      $("#referralFromTeamMember").hide();
+    } else if (selectedOption === "referral") {
+      // If selected option is "Referral", show referral input and hide online search options
+      $("#onlineSearchOptions").hide();
+      $("#referralFromTeamMember").show();
+    } else if (selectedOption === "other") {
+      // If selected option is other, enter detail textarea
+      $("#otherDetails").show();
+      $("#referralFromTeamMember").hide();
+    } else {
+      // If any other option is selected, hide both online search options and referral input
+      $("#onlineSearchOptions").hide();
+      $("#referralFromTeamMember").hide();
+      $("#otherDetails").hide();
+    }
+  });
+
+  // handle status of employemnt event
+  $("#statusEmployment").change(function(){
+    let employementOption = $(this).val();
+  })
+
   // Handle form submission
   $("#formApp").submit(function (event) {
     // Prevent default form submission
