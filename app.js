@@ -35,26 +35,46 @@ $(document).ready(function () {
 
     // Country validation
     let country = $("#countrySelect").val();
-    if (country === "Select your country") {
+    if (country === null || country === "Select your country") {
       displayError($("#countryError"), "Please select a country.");
       isValid = false;
     }
 
     // about validation
     let aboutUsValidation = $("#aboutSelect").val();
-    if (aboutUsValidation === "Select one of the options") {
+    if (
+      aboutUsValidation === null ||
+      aboutUsValidation === "Select one of the options"
+    ) {
       displayError($("#aboutError"), "Please select one of the options above.");
       isValid = false;
     }
 
-    // employment valaidation
+    // employment validations
     let employmentValidation = $("#statusEmployment").val();
-    if (employmentValidation === "Select your status of work") {
+    if (
+      employmentValidation === null ||
+      employmentValidation === "Select your status of work"
+    ) {
       displayError(
         $("#employmentError"),
         "Please select your status of employment."
       );
       isValid = false;
+    }
+
+    // D.O.B validations
+    let dobValidation = $("#dateInput").val();
+
+    if (dobValidation === "") {
+      displayError($("#dobError"), "Please enter your date of birth.");
+      isValid = false;
+    }
+
+    // if all items are valid, proceed with validation
+    if (isValid) {
+      // Clear any previous error messages
+      $(".error").text("");
     }
   });
 

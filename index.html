@@ -55,10 +55,8 @@
           <!-- Added margin-bottom -->
           <div class="col-md-6 mb-3">
             <label for="countrySelect" class="form-label">Country</label>
-            <select class="form-select">
-              <option selected disabled id="countrySelect">
-                Select your country
-              </option>
+            <select class="form-select" id="countrySelect">
+              <option selected disabled>Select your country</option>
               <option value="USA">United States</option>
               <option value="UK">United Kingdom</option>
               <option value="Canada">Canada</option>
@@ -72,10 +70,8 @@
             <label for="aboutSelect" class="form-label"
               >How did you hear about us?</label
             >
-            <select class="form-select">
-              <option selected disabled id="aboutSelect">
-                Select one of the options
-              </option>
+            <select class="form-select" id="aboutSelect">
+              <option selected disabled>Select one of the options</option>
               <option value="onlineSearch">Online Search</option>
               <option value="meeting">Meeting</option>
               <option value="event">Event</option>
@@ -94,10 +90,8 @@
             <label for="statusEmployment" class="form-label"
               >Status of Employment</label
             >
-            <select class="form-select">
-              <option selected disabled id="statusEmployment">
-                Select your status of work
-              </option>
+            <select class="form-select" id="statusEmployment">
+              <option selected disabled>Select your status of work</option>
               <option value="employed">Employed</option>
               <option value="unemployed">Unemployed</option>
               <option value="retired">Retired</option>
@@ -105,10 +99,21 @@
             <span class="error" id="employmentError"></span>
           </div>
         </div>
+        <!-- D.O.B -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="dateInput" class="form-label">Select a Date:</label>
+              <input type="date" class="form-control" id="dateInput" />
+            </div>
+          </div>
+        </div>
+        <span class="error text-center" id="dobError"></span>
+
         <!-- End of row -->
 
         <div class="text-center">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary mt-5">Submit</button>
         </div>
       </form>
     </div>
