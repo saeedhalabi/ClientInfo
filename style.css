@@ -8,3 +8,7 @@
   margin: 20px 0 0 66px;
   cursor: pointer;
 }
+#dateInput {
+  transform: translateX(-10px);
+  width: 220px;
+}
