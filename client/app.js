@@ -5,6 +5,7 @@ $(document).ready(function () {
     if (file) {
       var url = URL.createObjectURL(file);
       $("#image-circle").css("background-image", `url(${url})`);
+      $("#displayImg").attr("src", url);
     }
   });
 
@@ -120,6 +121,25 @@ $(document).ready(function () {
       if (isValid) {
         // Clear any previous error messages
         $(".error").text("");
+
+        // Display the submitted values in the display box
+        $("#dobValue").text(dobValidation);
+        $("#employmentValue").text($("#statusEmployment").val());
+        $("#socialMediaValue").text(
+          $("input[name='onlineSearchOption']:checked").val()
+        );
+
+        // Get the background image URL of the #image-circle element
+        let imageUrl = $("#image-circle")
+          .css("background-image") // Get the background-image CSS property
+          .replace('url("', "") // Remove the 'url("' prefix
+          .replace('")', ""); // Remove the '")' suffix
+
+        // Set the extracted image URL as the src attribute of the #displayImage element
+        $("#displayImage").attr("src", imageUrl);
+
+        // Show the display box
+        $("#displayBox").show();
       }
     }
   });
