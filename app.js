@@ -32,9 +32,9 @@ $(document).ready(function () {
   });
 
   // handle status of employemnt event
-  $("#statusEmployment").change(function(){
+  $("#statusEmployment").change(function () {
     let employementOption = $(this).val();
-  })
+  });
 
   // Handle form submission
   $("#formApp").submit(function (event) {
