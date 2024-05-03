@@ -31,9 +31,14 @@ $(document).ready(function () {
     }
   });
 
-  // handle status of employemnt event
+  // handle status of employment event
   $("#statusEmployment").change(function () {
-    let employementOption = $(this).val();
+    let employmentOption = $(this).val();
+    if (employmentOption === "employed") {
+      $("#employedNameInput").show();
+    } else {
+      $("#employedNameInput").hide();
+    }
   });
 
   // Handle form submission
